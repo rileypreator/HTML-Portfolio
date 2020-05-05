@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment 10</title>
+        <!-- BOOTSTRAP FILES -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="./assign10.css">
+    </head>
+    <body class="content">
+        <h2 class="jumbotron">Mileage Calculator</h2>
+        <!-- Starting City -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <h3>Please select your starting city</h3>
+                    <input type="text" name="startCity" id="startCity" class="form-control box-width input">
+                    <p class="startCityValidate visibility alert alert-danger">Please fill in the required field above</p>
+                    <!-- Starting State -->
+                    <h3>Please enter your starting state abbreviation</h3>
+                    <input type="text" name="startState" id="startState" class="form-control box-width input">
+                    <p class="startStateValidate visibility alert alert-danger">Please fill in the required field above with a correct abbreviation</p>
+                    <!-- Ending City -->
+                    <h3>Please select your ending City</h3>
+                    <input type="text" name="endCity" id="endCity" class="form-control box-width input">
+                    <p class="endCityValidate visibility alert alert-danger">Please fill in the required field above</p>
+                    <!-- Ending State -->
+                    <h3>Please enter your ending State abbreviation</h3>
+                    <input type="text" name="endState" id="endState" class="form-control box-width input">
+                    <p class="endStateValidate visibility alert alert-danger">Please fill in the required field above abbreviation</p>
+                </div>
+                <div class="col-sm">
+                    <iframe width="600" height="450" class="googleFrame" style="border:0" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDxlZdklGXJh_eRqU8BCtvULhf9iGzvgHs&origin=Minneapolis+MN&destination=Denver+CO" allowfullscreen></iframe>
+                    <div class="showDistance"></div>
+                </div>
+            </div>
+        </div>
+        <div class="flex">
+            <input type="button" value="Find Distance" class="btn btn-lg btn-success submit-button" onclick="findDistance();">
+        </div>  
+
+        <!-- SCRIPT FILES -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="./assign10.js"></script>
+    </body>
+    
+</html>

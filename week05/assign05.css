@@ -1,0 +1,190 @@
+@font-face {
+    src: url(./AmericanTypewriterBQ-Bold.otf);
+    font-family: AmericanTypewriter;
+}
+
+.content {
+    max-width: 960px;
+    margin: 0 auto;
+    height: auto;
+    background-color: white;
+}
+h1, h2, h3, h4, h5, a, p {
+    font-family: AmericanTypewriter;
+    color: #61B726;
+}
+
+a {
+    text-decoration: none;
+}
+
+a {
+     display: inline;
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+    display: inline;
+}
+
+body {
+    /* Used this website for help regarding two backgrounds 
+    https://stackoverflow.com/questions/9342728/css-make-background-image-appear-both-at-left-and-right-of-element */
+    background: url(./pineappleleft.png) no-repeat fixed left, url(./pineappleright.png) no-repeat fixed right;
+
+}
+
+.logo {
+    max-width: 25%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+.nav-link {
+    font-size: 30px;
+}
+
+.main-header {
+    color: white;
+    background-color: #61B726;
+    border-radius: 20px;
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 40px;
+    margin-bottom: 100px;
+}
+
+.flexbox-main {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.character-boxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+    align-items: center;
+} 
+
+.character-boxes2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+} 
+.shawn-photo, .gus-photo, .lassiter-photo, .julliet-photo {
+    width: 50%;
+    border-radius: 20px;
+}
+
+footer {
+    background-color: #61B726;
+    border-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer p, footer a {
+    color: white;
+    font-size: 20px;
+    padding: 20px 20px 0px 20px;
+}
+
+@media only screen and (max-width: 730px) {
+    
+    body {
+        background: none;
+    }
+    footer {
+        display: flex;
+        background-color: white;
+        border: #61B726 2px solid;
+        flex-direction: column;
+        
+    }
+    footer p, footer a {
+        width: 90%;
+        text-align: center;
+        background-color: white;
+        color: #61B726;
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+
+    .character-boxes, .character-boxes2 {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .shawn-photo, .gus-photo, .lassiter-photo, .julliet-photo {
+        width: 95%;
+        border-radius: 20px;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+
+    .main-header {
+        font-size: 50px;
+        max-width: 95%;
+        margin: 0px 0px 90px 0px;
+        text-align: center;
+    }
+
+    .links {
+        flex-direction: column;
+    }
+
+    .nav-link {
+        font-size: 55px;
+        max-width: 95%;
+        margin-bottom: 40px;
+
+    }
+
+    .logo {
+        max-width: 100%;
+        margin: 0px 0px 90px 0px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    h2 {
+        font-size: 35px;
+    }
+
+    footer a, footer p {
+        font-size: 20px;
+    }
+
+    .nav-link {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    body {
+        background: none;
+    }
+}

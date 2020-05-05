@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Riley Preator's Improved Home Page</title>
+        <!-- Future StyleSheet for this page -->
+        <link rel="stylesheet" href="./assign03.css">
+        <style>
+            .small-margin {
+                margin: 20px;
+            }
+            .blue-border {
+                border: 2px #7CA7B5 solid;  
+                text-align: center;
+            }
+
+            .padding {
+                padding: 20px;
+            }
+
+            .max-width {
+                max-width: 1100px;
+            }
+            
+            .align-left {
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body  class="center content">
+        <header>
+            <h1 style="color: #49201D; font-size: 59px; padding: 10px 5px 10px 5px;" class="blue-border">
+                Welcome to Riley Preator's Homepage</h1>
+                <a href="https://en.wikipedia.org/wiki/Lyon">
+                    <img src="https://gstreamer.freedesktop.org/conference/2019/lyon_banner_800.jpg" alt="Lyon River" class="max-width">
+                </a>
+            <div class="header-grid bottom-margin">
+                <a href="../index.html" class="header-link-1 center padding link-color">Back to Homepage</a>
+                <a href="#schedule" class="header-link-2 center padding link-color">Link to Schedule</a> 
+
+                <!-- CREATE: LINK TO FORM -->
+                <a href="#bottom" class="header-link-3 center padding link-color">Link to Bottom</a>
+                <a href="https://www.byui.edu/" class="header-link-4 center padding link-color">BYU-I Homepage</a>
+                <a href="https://www.linkedin.com/in/riley-preator-0b324016a/" class="header-link-5 center padding link-color">LinkedIn</a>
+            </div>
+        </header>
+        <div class="middle-grid">
+            <p style="font-size: 18px; color:#7CA7B5;" class="about-me-paragraph">
+                My name is <b>Riley Preator</b> and I am currently a Junior at BYU-Idaho. 
+                I am pursing a degree in <b>Software Engineering.</b> I am also deeply in love
+                with my wife, <b>Tyli.</b> We have been married almost <i>6 months</i> and first met
+                while sledding with friends. I am originally from <b>Minnesota</b>, but my
+                family moved to Utah while I was on a mission in <i>Lyon France.</i> I love all things
+                board games and can probably beat anyone in <b>Mario Kart</b>.
+            </p>
+            <h2 class="lyon-rotate">Lyon, France</h2>
+                <img class="france-photo" src="https://lp-cms-production.imgix.net/2019-06/GettyImages-476097944_medium.jpg?fit=crop&q=40&sharp=10&vib=20&auto=format&ixlib=react-8.6.4" alt="Lyon Photo">
+            <blockquote class="middle-quote" cite="https://www.youtube.com/watch?v=LstIgtkEe50" style="color: #49201D; font-size: 30px;">
+            <b>"Why do we fall? So that we can learn to pick ourselves back up."</b> -Alfred Pennyworth
+            </blockquote>
+            <img class="middle-photo" src="./TyliandRiley.jpg" alt="My Wife And I">
+        </div>
+        <h3 style="color: #49201D; font-size: 30px; border: 2px #7CA7B5 solid;" class="center">Class Schedule</h3>
+        <table style="margin-left:auto; margin-right:auto;">
+            <tr>
+                <th>Class name</th>
+                <th>Course Code</th>
+                <th>Course Description</th>
+                <th>Location</th>
+            </tr>
+            <tr>
+                <td>CS 213-01</td>
+                <td>Web Engineering I</td>
+                <td>Learning to develop applications and webpagesfor the internet</td>
+                <td>STC 215</td>
+            </tr>
+            <tr>
+                <td>CS 246-03</td>
+                <td>Software Development</td>
+                <td>Learning correct software development practices through Java Applications</td>
+                <td>STC 385</td>
+            </tr>
+            <tr>
+                <td>FR 202-01</td>
+                <td>Introduction to French Literature</td>
+                <td>Beginning to understand the importance of common and past French Litterature</td>
+                <td>Smith 331</td>
+            </tr>
+            <tr>
+                <td>REL 250C-49</td>
+                <td>Jesus Christ and the Everlasting Gospel</td>
+                <td>Becoming more like Jesus Christ every day and learning how to be a more faithful disciple</td>
+                <td>Online</td>
+            </tr>
+            <tr>
+                <td>FDSCI 203-10</td>
+                <td>Environmental Stewardship</td>
+                <td>Becoming more conscious of our world around us and how we can take care of the planet </td>
+                <td>Online</td>
+            </tr>
+        </table>
+        <a id="schedule"></a>
+        <form class="form-grid">
+            <!-- Learned of onfocus from this website https://www.w3schools.com/howto/howto_html_clear_input.asp-->
+            <div class='form-1'>
+            <input type="text" name="FirstName" required value="First Name" onfocus="this.value=''"><br>
+            <input type="checkbox" name="sports" value="Sport">Do you play Sports?<br>
+            <input type="checkbox" name="SmashBros" value="answer">Do you play Smash Bros?<br>
+            <input type="checkbox" name="MintMilkshakes" value="MintIsBest">Are mint milkshakes the best?<br>
+            </div>
+            <div class="form-2">
+            What part of the US are you from?<br>
+            <input type="radio" name="region" value="NorthWest" class="align-left">NorthWest<br>
+            <input type="radio" name="region" value="South" class="align-left">South<br>
+            <input type="radio" name="region" value="East" class="align-left">East<br>
+            <input type="radio" name="region" value="West" class="align-left">West<br>
+            </div>
+            <div class="form-3">
+            What major are you pursuing?
+            <select name="Major">
+                <option value="SE">Software Engineering</option>
+                <option value="CS">Computer Science</option>
+                <option value="EE">Electrical Engineering</option>
+                <option value="CE">Computer Engineering</option>
+                <option value="other">Other</option>
+            </select>
+            </div>
+            <textarea name="comment" onfocus="this.value=''">What would you like to tell me?</textarea>
+            <input type="submit" value="Submit" class="form-button">
+            <input type="reset" value="Reset Form" class="form-button">
+        </form>
+        <a id="bottom"></a>
+    </body>
+
+</html>

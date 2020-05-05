@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <form id="form1">
+        Num 1: <input type="number" min="0" max="100" step="0.01" name="num1" id="num1" required><br>
+        Num 2: <input type="number" min="0" max="100" step="0.01" name="num2" id="num2" required><br>
+        Answer: <input type="text" name="answer" id="answer" readonly><br>
+        <input type="button" name="addTotal" id="addTotal" value="Add" onclick="addNumbers();">
+        <input type="reset" name="reset" id="reset" value="Clear">
+
+    </form>
+    <script>
+        function addNumbers() {
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+
+            let form1= document.getElementById("form1");
+            let answerResult = document.getElementById("answer");
+            let n1Element = document.getElementById("num1");
+            
+            if (!form1.reportValidity())
+                answerResult.value = "";
+            else {
+                let answer = num1 + num2;
+                answerResult.value = answer;
+            }
+            
+        }
+    </script>
+</body>
+</html>

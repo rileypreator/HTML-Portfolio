@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Krusty Krab</title>
+        <link rel="stylesheet" href="./assign04.css">
+        <style>
+            /* MAIN GRID */
+            .main-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 20px;
+            }
+
+            .main-header-1 {
+                grid-column: 1/3;
+                grid-row: 1/2;
+                margin: 30px 20px 30px 20px;
+                max-width: 100%;
+            }
+
+            .main-paragraph-1 {
+                grid-column: 1/2;
+                grid-row: 2/3;
+                margin: 5px 20px 5px 20px;
+            }
+
+            .main-right-img {
+                grid-column: 2/3;
+                grid-row: 2/3;
+                max-width: 100%;
+            }
+
+            /* KREW GRID */
+
+            .krew-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: 150px 150px 150px 20px 150px 150px 20px 150px 150px 20px;
+                grid-gap: 30px;
+            }
+            .main-header-2 {
+                grid-column: 1/5;
+            }
+
+            .main-name-1 {
+                grid-column: 1/3;
+                grid-row: 2/3;
+                height: 70px;
+                margin-top: 30px;
+            }
+
+            .main-intro-1 {
+                grid-column: 1/3;
+                grid-row: 3/4;
+                color: #0B18B3;
+                margin-top: 0px;
+            }
+
+            .spongebob-img {
+                grid-column: 3/5;
+                grid-row: 2/4;
+                margin-bottom: 0px;
+                width: 100%;
+            }
+
+            .squidward-img {
+                grid-column: 1/3;
+                grid-row: 5/7;
+            }
+
+            .main-name-2 {
+                grid-column: 3/5;
+                grid-row: 5/6;
+                font-size: 27px;
+                height: 70px;
+                margin-top: 50px;
+            }
+
+            .main-intro-2 {
+                grid-column: 3/5;
+                grid-row: 6/7;
+                color: #0B18B3;
+            }
+
+            .main-name-3 {
+                grid-column: 1/3;
+                grid-row: 8/9;
+            }
+
+            .main-intro-3 {
+                grid-column: 1/3;
+                grid-row: 9/10;
+                color: #0B18B3;
+            }
+
+            .mr-krabs-img {
+                grid-column: 3/5;
+                grid-row: 8/10;
+            }
+        </style>
+    </head>
+    <body id="content">
+        <header>
+                <img src="./krustykrabFINAL.png" alt="Krusty Krab Logo" class="logo-box"/>
+                <!-- <h1 class="logo-box">Krusty Krab</h1> -->
+            <nav>
+                <ul>
+                    <li><a href="#" class="background-color">Home</a></li>
+                    <li><a href="../week05/assign05.html" class="background-color">Gallery Grub</a></li>
+                    <li><a href="assign04_2.html" class="background-color">Pizza Delivery</a></li>
+                    <li><a href="#" class="background-color">History</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <img class="banner-img" src="./KrustyKrabBuilding.png" alt="Krusty Krab Building">
+            <div class="main-grid">
+                <h2 class="main-header-1 background-border">Come Spend Your Money Here!</h2>
+                <p class="main-paragraph-1 background-border no-shadow">
+                    Here at the <i>Krusty Krab</i>, we deliver the best burgers under the sea.
+                    We always admire our loyal customers who love the taste of our mouth-warming
+                    Krabby Patty. We provide the best service for all bottom feeders around the ocean.
+                    We even offer free napkins with a purchase of $9.99 or more (As long 
+                    as you pay a dollar per napkin)! <i>Come and eat with us and bring your money!</i>
+                </p>
+                <img class="main-right-img" src="./KrabbyPatty.jpg" alt="Krabby Patty">
+            </div>
+            <div class="krew-grid">
+                <h2 class="main-header-2 background-border">The Krusty Krew!</h2>
+                <h3 class="main-name-1 background-border">Spongebob || Fry Cook</h3>
+                <p class="main-intro-1 background-border">Our master chef in charge of making the all important
+                    Krabby Patty. He has worked here for over 30 years.
+                </p>
+                <img class="spongebob-img" src="./SpongebobFrycook.jpg" alt="Spongebob FryCook"/>
+                <img class="squidward-img" src="./SquidwardRegister.jpeg" alt="Squidward Register"/>
+                <h3 class="main-name-2 background-border">Squidward || Cash Register</h3>
+                <p class="main-intro-2 background-border">Although his clarinet skills could make any baby cry,
+                    Squidward is eager to help you order your next meal.
+                </p>
+                <h3 class="main-name-1 background-border">Spongebob || Fry Cook</h3>
+                <p class="main-intro-1 background-border">Our loyal chef in charge of making the all important
+                    Krabby Patty. He has worked here for over 30 years.
+                </p>
+                <h3 class="main-name-3 background-border">Mr Krabs || Owner</h3>
+                <p class="main-intro-3 background-border">The founder and owner of the greatest
+                    eatery the underside of the ocean has ever seen. Loves tips.
+                </p>
+                <img class="mr-krabs-img" src="./MrKrabsWithKrustyKrab.jpg" alt="Mr Krabs with Restaurant"/>
+            </div>
+        </main>
+        <footer>
+            <p class="copyright">&copy; Krusty Krab Inc.</p>
+            <a href="#" class="sigmar">Krusty Towers</a>
+            <a href="#" class="sigmar">Kutie Krab</a>
+            <a href="#" class="sigmar">Terms and Agreements</a>
+            <a href="#" class="sigmar hidden">Secret Recipe</a>
+        </footer>
+    </body>
+
+</html>

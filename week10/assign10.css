@@ -1,0 +1,33 @@
+.visibility {
+    visibility: hidden;
+}
+
+.content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.jumbotron {
+    margin-top: 20px;
+}
+
+.box-width {
+    width: 300px;
+}
+
+.googleFrame {
+    border: solid black 1px;
+}
+
+.input {
+    margin: 20px 0px 20px 0px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.submit-button {
+    text-align: center;
+}

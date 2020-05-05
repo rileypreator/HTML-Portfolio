@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spring Festival Competition</title>
+        <link rel="stylesheet" href="./assign13.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    </head>
+    <body onload="loadRegister();">
+        <div class="content">
+            <h2>Spring Festival Competition</h2>
+            <form id="registration-form">
+                <h2>Performance Type</h2>
+                <div id="concert-type" onchange="checkDuet();">
+                    <div>
+                        <input type="radio" name="performance" id="solo" value="Solo">
+                        <label for="solo">Solo</label><br>
+                    </div>
+                    <div>
+                        <input type="radio" name="performance" id="duet" value="Duet">
+                        <label for="duet">Duet</label><br>
+                    </div>
+                    <div>
+                        <input type="radio" name="performance" id="concerto" value="Concerto">
+                        <label for="concerto">Concerto</label><br>
+                    </div>
+                    <p class="form-error performance-Validate alert alert-danger">Please select a performance type</p>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        First Name<input type="text" name="first_name" id="first_name" class="student-info form-control">
+                        <p class="form-error first-name-1-validate alert alert-danger">Please input a first name</p>
+                    </div>
+                    <div class="col">
+                        Last Name<input type="text" name="last_name" id="last_name" class="student-info form-control">
+                        <p class="form-error last-name-1-validate alert alert-danger">Please input a last name</p>
+                    </div>
+                </div>
+                    Student ID#<input type="text" name="student_id" id="student_id" class="student-info form-control">
+                    <p class="form-error student-id-1-validate alert alert-danger">Please input a Student ID</p>
+                <hr>
+                <div id="second-student" class="second-student">
+                    <div class="form-row">
+                        <div class="col">
+                            Second Student's First Name<input type="text" name="first_name_2" id="first_name_2" class="student-info form-control">
+                            <p class="form-error first-name-2-validate alert alert-danger">Please input a first name</p>
+                        </div>
+                        <div class="col">
+                            Second Student's Last Name<input type="text" name="last_name_2" id="last_name_2" class="student-info form-control">
+                            <p class="form-error last-name-2-validate alert alert-danger">Please input a last name</p>
+                        </div>
+                    </div>
+                    Student ID#<input type="text" name="student_id_2" id="student_id_2" class="student-info form-control">
+                    <p class="form-error student-id-2-validate alert alert-danger">Please input a Student ID</p>
+                    <hr>
+                </div>
+                
+                <div class="select-options">
+                    Skill: <select id="skill" name="skill" class="form-control">
+                        <option value="">Choose One</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Pre-advanced">Pre-Advanced</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                    <p class="form-error skill-validate alert alert-danger">Please select a skill level</p>
+                    Instrument: <select id="instrument" name="instrument" class="form-control">
+                        <option value="">Choose One</option>
+                        <option value="Piano">Piano</option>
+                        <option value="Voice">Voice</option>
+                        <option value="String">String</option>
+                        <option value="Organ">Organ</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <p class="form-error instrument-validate alert alert-danger">Please select an instrument</p>
+                    Location: <select id="location" name="location" class="form-control">
+                        <option value="">Choose One</option>
+                        <option value="Austin">Austin</option>
+                        <option value="Snow">Snow</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <p class="form-error location-validate alert alert-danger">Please select a location</p>
+                    Room Number: <select id="room_number" name="room_number" class="form-control">
+                        <option value="">Choose One</option>
+                        <option value="100">100</option>
+                        <option value="200">200</option>
+                        <option value="300">300</option>
+                        <option value="400">400</option>
+                    </select>
+                    <p class="form-error room-validate alert alert-danger">Please select a room</p>
+                    Time Slot: <select id="time_slot" name="time_slot" class="form-control">
+                        <option value="">Choose One</option>
+                        <option value="800">8:00 AM</option>
+                        <option value="830">8:30 AM</option>
+                        <option value="900">9:00 AM</option>
+                        <option value="930">9:30 AM</option>
+                        <option value="1000">10:00 AM</option>
+                    </select>
+                    <p class="form-error time-validate alert alert-danger">Please select a time slot</p>
+                </div>
+                <div class="buttons">
+                    <button type="reset" class="btn btn-danger">Reset Form</button>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </form>
+            <div class="show-alert"></div>
+            <div id="display-results"></div>
+            <script src="./assign13.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        </div>
+    </body>
+</html>

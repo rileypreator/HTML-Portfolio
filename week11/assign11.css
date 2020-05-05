@@ -1,0 +1,27 @@
+.content {
+    margin: 20px;
+    border: solid black 1px;
+    padding: 10px;
+}
+
+.formDiv {
+    width: 400px;
+    margin: 0 auto;
+}
+
+input {
+    margin: 10px;
+}
+
+input.btn, button.btn {
+    margin: 10px;
+}
+
+.buttonLine {
+    display: flex;
+    justify-content: space-around;
+}
+
+h2 {
+    text-align: center;
+}

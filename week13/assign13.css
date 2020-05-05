@@ -1,0 +1,56 @@
+.second-student {
+    display: none;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: block;
+}
+
+#registration-form {
+    padding: 20px;
+    border: 1px solid lightgray;
+    /* width: 90%; */
+}
+
+#concert-type {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.select-options {
+    width: 40%;
+}
+
+.student-info, select {
+    /* margin: 10px; */
+    display: block;
+}
+
+.form-error {
+    display: none;
+    margin: 10px;
+}
+
+.display-info {
+    border: 1px black solid;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.buttons {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.success-alert {
+    /* display: none; */
+    margin: 10px;
+}

@@ -1,0 +1,79 @@
+<!-- From https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON -->
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+
+   <title>Our superheroes</title>
+
+   <link href="https://fonts.googleapis.com/css?family=Faster+One"
+      rel="stylesheet">
+   <link rel="stylesheet" href="w09-teach.css">
+</head>
+
+<body>
+
+   <header>
+
+   </header>
+
+   <section>
+
+   </section>
+
+   <script>
+      const header = document.querySelector('header');
+      const section = document.querySelector('section');
+      window.onload = runJson();
+      function runJson() {
+      let url = "./w09-json.json";
+
+      let xhr = new XMLHttpRequest();
+
+      xhr.onreadystatechange = function() {
+       // parse the json file into a javascript object
+       let response = JSON.parse(this.responseText);   
+        
+        // pass the javascript object to another function
+        displayResults(response);  
+      }
+
+      xhr.open("GET", url, true);
+      xhr.send();
+      }
+
+      function displayResults(responseJson) {
+
+         let members = responseJson.members;
+
+         let header = "<h1>" + responseJson.squadName + "</h1>";
+         let homeTown = "<p>" + responseJson.homeTown + "</p>";
+         let formed = "<p>" + responseJson.formed + "</p>";
+         let secretBase = "<p>" + responseJson.secretBase + "</p>";
+         let active = "<p>" + responseJson.active + "</p>";
+
+         header.innerHTML = header + homeTown + formed + secretBase + active;
+         let memberContent = "";
+         for (member of members) {
+            memberContent += "<h2>" +
+               member.name + "</h2> " + 
+              "<p>" + member.age + " " + 
+               member.secretIdentity + "" + "<ul>";
+
+               let powers = member.powers;
+               for (power of powers) {
+                  memberContent += "<li>" + power + "</li>";
+               }
+
+               memberContent + "</ul></p>";
+
+               let article = "<article>" + memberContent + "</article>";
+               section.innerHTML += article;
+         }
+      }
+
+   </script>
+</body>
+
+</html>

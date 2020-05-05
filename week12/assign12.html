@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment 08</title>
+        <script src="./assign12.js"></script>
+        <link rel="stylesheet" href="./assign12.css">
+    </head>
+    <body id="content" onload="startupLoad();">
+        <form id="form-grid" onreset="resetForm();" action="assign12.php" method="GET">
+            <div class="form-1 form-box">
+                First Name: <input type="text" name="first_name" id="firstName" required>
+                <p id="firstNameVerify" class="error">Please enter a first name</p>
+                Last Name:  <input type="text" name="last_name" id="lastName" required>
+                <p id="lastNameVerify" class="error">Please enter a last name</p>
+                Address:    <input type="text" name="address" id="address" required>
+                <p id="addressVerify" class="error">Please enter an address</p>
+                Phone: <input type="text" name="phone" id="phone" value="Enter with no hyphens" required onchange="validatePhone(this);" onfocus="this.value=''">
+                <p id="phoneVerify" class="error">Please enter a valid phone number</p>
+            </div>
+            <div class="form-2 form-box">
+                <div class="item" id="item1">
+                    <img src="./franceJersey.jpeg" alt="France Jersey" class="image">
+                    <input type="checkbox" name="item1" id="itemWant1" onclick="addTotal(this);" value="franceJersey">
+                </div>
+                <div class="item" id="item2">
+                    <img src="./olShirt.jpg" alt="Olympique Lyonnais Jersey" class="image">
+                    <input type="checkbox" name="item2" id="itemWant2" onclick="addTotal(this);">
+                </div>
+                <div class="item" id="item3">
+                    <img src="./UofMJersey.jpg" alt="University of Minnesota Jersey" class="image">
+                    <input type="checkbox" name="item3" id="itemWant3" onclick="addTotal(this);">
+                </div>
+                <div class="item" id="item4">
+                    <img src="./vikingsJersey.jpeg" alt="Vikings Jersey" class="image">
+                    <input type="checkbox" name="item4" id="itemWant4" onclick="addTotal(this);">
+                </div><br>
+                <!-- <div class="form-total">
+                    Total: <h2 id="total"></h2>
+                </div> -->
+            </div>
+            <div class="form-3 form-box">
+                Credit Card Type: <br>
+                    Visa                <input type="radio" name="card" value="Visa"><br>
+                    MasterCard          <input type="radio" name="card" value="MasterCard"><br>
+                    American Express    <input type="radio" name="card" value="American Express"><br>
+                Credit Card Number: <input type="text" id="cardNumber" name="credit_card" maxlength="16" onchange="validateCardNumber(this)">
+                <p id="cardNumberVerify" class="error">Please enter a card number</p>
+                Credit Card Expiration Date <input type="text" id="exp_date" name="exp_date" maxlength="8" onchange="validateDate(this);">
+                <p id="dateVerify" class="error">Please enter an expiration date</p>
+                <!-- <div id="verification">
+                    <p id="firstNameVerify">Please enter a first name</p>
+                    <p id="lastNameVerify">Please enter a last name</p>
+                    <p id="addressVerify">Please enter an address</p>
+                    <p id="phoneVerify">Please enter a valid phone number</p>
+                    <p id="cardNumberVerify">Please enter a card number</p>
+                    <p id="dateVerify">Please enter an expiration date</p>
+                </div> -->
+            </div>
+            <div class="form-4">
+                <div class="block">
+                <h2>Total: $</h2>
+                <h2 id="total"></h2>
+                </div>
+                <input type="reset" name="reset" id="reset" value="Clear">
+                <!-- <input type="button" name="validate" id="btnsubmit" value="Validate" onclick="validateAll();"> -->
+                <button type="submit" name="validate" id="btnsubmit" value="Submit" onclick="return validateAll()">Submit</button>
+            </div>
+        </form>
+    </body>
+
+</html>

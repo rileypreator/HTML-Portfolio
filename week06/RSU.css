@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+
+body {
+    margin: 0 auto;
+    background-color: #FBEB6F;
+    padding-bottom: 50px;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    color: #A0A5A7;
+    font-size: 18px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.logo-img {
+    width: 50%;
+    margin: 0 auto;
+    /* justify-content: center; */
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.all-nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    color: #A0A5A7;
+    font-size: 25px;
+    padding: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+    background-color: #A0A5A7;
+    color: #FBEB6F;
+}
+
+
+
+/* Studied this page to get some information regarding navbars */
+/* https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp */
+
+.left {
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    /* height: 100%;
+    /* position: fixed; */
+    /* height: 200px; */
+    background-color: #A0A5A7;
+}
+
+.left a {
+    display: block;
+    margin-bottom: 10px;
+    color: #FBEB6F;
+}
+
+.right {
+    width: 70%;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.main-info {
+    margin-bottom: 70px;
+    margin-left: 21px;
+}
+
+/* .spacer {
+    width: 100%;
+    height: 200px;
+} */
+footer {
+   width: 70%;
+   float: right;
+   bottom: 0;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;  
+   position: relative;
+   z-index: 1000;
+   align-content: space-evenly;
+   background-color: #A0A5A7;
+}
+
+footer p, footer a {
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+    color: #FBEB6F; 
+}
+
+@media only screen and (max-width: 1200px) {
+    .left {
+        width: 100%;
+        position: static;
+    }
+
+    .left a {
+        text-align: center;
+        margin: 20px;
+    }
+
+    .right {
+        width: 100%;
+        display: flex;
+    }
+
+    .main-info {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    footer {
+        width: 100%;
+    }
+}

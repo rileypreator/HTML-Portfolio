@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTsF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment 09</title>
+        <script src="./assign09.js"></script>
+    </head>
+    <body>
+        <h2>Please select the country that you would like to learn more about</h2>
+        <form>
+            <select id="country" name="country" onchange="getCountryChoice();">
+                <option value="none"></option>
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="russia">Russia</option>
+                <option value="mexico">Mexico</option>
+            </select>
+        </form>
+
+        <p id="cityInfo">No Country Selected</p>
+
+        <div id="section2">
+            <form>
+                Filename: <input type="text" name="fileName" id="fileName" value="json.txt"><br>
+                <input type="button"  name="Submit" id="buttonSubmit" value="Submit" onclick="validateFile();">
+            </form>
+        </div>
+
+        <h2>The file you selected contained the following students: </h2>
+
+        <p id="showStudents"></p>
+    </body>
+
+</html>

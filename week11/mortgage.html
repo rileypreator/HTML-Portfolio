@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment 11</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="./assign11.css">
+    </head>
+    <body>
+        <div class="formDiv">
+            <form action="mortgage.php" method="GET" class="content">
+                <h2>Mortgage Calculator</h2>
+                APR: <input type="number" name="apr" id="apr" step="0.01" min="0" max="25" required><br>
+                Loan Term: <input type="number" id="term" name="term" min="0" max="40"  required><br>
+                Loan Amount: <input type="number" name="amount" id="amount" min="0" required><br>
+                <!-- Monthly Payment -> <input type="number" name="payment" step="0.01" id="payment" readonly><br> -->
+                <div class="buttonLine">
+                    <input type="reset" name="reset" id="reset" value="Clear" class="btn btn-danger">
+                    <button type="submit" name="calculate" id="calculate" value="Submit" onclick="return validate()" class="btn btn-success">Submit</button>
+                </div>
+            </form>
+            <p id="error"></p>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="./assign11.js"></script>
+    </body>
+
+</html>
